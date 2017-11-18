@@ -178,7 +178,6 @@ button:focus {
     margin: 5px 0 5px auto;
     /*background: rgba(255, 153, 0, .7);*/
     border-radius: 20px 20px 0px 20px;
-
     background: rgb(64, 172, 246);
     overflow-wrap: break-word;
 
@@ -186,7 +185,7 @@ button:focus {
 }
 
 .right {
-     justify-content: flex-end;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 

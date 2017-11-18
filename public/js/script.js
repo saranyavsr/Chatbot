@@ -42,6 +42,14 @@ recognition.addEventListener('result', (e) => {
   socket.emit('chat message', text);
 });
 
+function send(text) {
+  const divHuman = document.createElement('div');
+    divHuman.className = "chat friend";
+    divHuman.innerHTML = `<img src=\'images/human1.jpg\'><p class=\'chat-message\'>${text}</p>`;
+    chatLogs.appendChild(divHuman);
+  socket.emit('chat message', text);
+}
+
 recognition.addEventListener('speechend', () => {
   recognition.stop();
 });
