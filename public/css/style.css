@@ -119,6 +119,14 @@ button:focus {
     background: rgba(0, 0, 0, .1);
 }
 
+/*Commented out because i used a more general version below*/
+/*.chat .user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}*/
 
 .chat {
     display: flex;
@@ -163,11 +171,6 @@ button:focus {
     border-radius: 20px 20px 20px 0;
 }
 
-.right {
-     justify-content: flex-end;
-    align-items: flex-end;
-}
-
 .self .chat-message {
     color: white;
     max-width: 80%;
@@ -181,6 +184,12 @@ button:focus {
 
     /*order: -1;*/
 }
+
+.right {
+     justify-content: flex-end;
+    align-items: flex-end;
+}
+
 
 .headerBar{
     /*border: 10px solid black;*/
