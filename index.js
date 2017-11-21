@@ -1,7 +1,7 @@
 'use strict';
 
-const APIAI_TOKEN = '3def5b70d35f4aa29a4e2d81cd293735';
-const APIAI_SESSION_ID = '129f6d43739541fa82589f7b5353c753';
+const APIAI_TOKEN = '0bca16a37999442b809ef9570f7049e6 ';
+const APIAI_SESSION_ID = 'ffcb8c2ed46e45e993e859d110b9d228';
 
 const express = require('express');
 const app = express();
@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(__dirname + '/views')); // html
 app.use(express.static(__dirname + '/public')); // js, css, images
 
-const server = app.listen(process.env.PORT || 5000, () => {
+const server = app.listen(process.env.PORT || 3000, () => {
   console.log('Express server listening on port %d', server.address().port);
 });
 
@@ -36,7 +36,12 @@ io.on('connection', function(socket) {
     });
 
     apiaiReq.on('response', (response) => {
+      var x = 10;
+      console.log("response json:" + JSON.stringify(response));
+      console.log("intent name is" + response.result.metadata.intentName);
       let aiText = response.result.fulfillment.speech;
+      console.log(aiText + x);
+
       console.log('Bot reply: ' + aiText);
       socket.emit('bot reply', aiText);
     });
